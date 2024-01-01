@@ -1,9 +1,10 @@
 {
+  "name": "hono-todo",
   "type": "module",
   "scripts": {
-    "build": "esbuild --bundle --outfile=./dist/index.js --platform=node --target=node18 ./src/index.ts",
+    "build": "esbuild --bundle --outfile=./dist/index.js --platform=node --target=node20 ./lambda/index.ts",
     "zip": "zip -j lambda.zip dist/index.js",
-    "update": "aws lambda update-function-code --zip-file fileb://lambda.zip --function-name hello",
+    "update": "aws lambda update-function-code --zip-file fileb://lambda.zip --function-name CdkStack-lambda8B5974B5-3X056Cc899uf",
     "deploy": "run-s build zip update"
   },
   "devDependencies": {
