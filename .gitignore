@@ -1,5 +1,10 @@
 node_modules
 dist
-lambda.zip
-.yarn
-.vscode
+.wrangler
+.dev.vars
+
+# Change them to your taste:
+wrangler.toml
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
