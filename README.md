@@ -3,8 +3,7 @@
 ## Tech stack
 
 - [Hono](https://hono.dev/)
-- AWS Lambda
-- AWS CDK
+- [Cloudflare Workers](https://workers.cloudflare.com/)
 
 ## Install dependencies
 
@@ -12,29 +11,14 @@
 pnpm i
 ```
 
-## Edit AWS Lambda code
-
-Edit `lambda/*` files
-
-## Create AWS Lambda function (first time only)
+## Run development server
 
 ```bash
-# Set your aws profile
-export AWS_PROFILE=your-profile
-
-# Change directory to cdk
-cd cdk
-
-npx cdk bootstrap
-npx cdk deploy
+pnpm run dev
 ```
 
-
-## Update AWS Lambda code
+## Deploy
 
 ```bash
-# Set your aws profile
-export AWS_PROFILE=your-profile
-
 pnpm run deploy
 ```
