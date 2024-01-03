@@ -1,7 +1,8 @@
 import {Hono} from 'hono';
+import {todos} from './todos/api';
 
 const app = new Hono();
 
-app.get('/', c => c.text('Hello Hono!'));
+app.route('/api/todos', todos);
 
 export default app;
