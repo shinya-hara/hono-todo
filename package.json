@@ -1,13 +1,23 @@
 {
   "scripts": {
     "dev": "wrangler dev src/index.ts",
-    "deploy": "wrangler deploy --minify src/index.ts"
+    "deploy": "wrangler deploy --minify src/index.ts",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "pnpm run compile",
+    "pretest": "pnpm run compile",
+    "posttest": "pnpm run lint"
   },
   "dependencies": {
     "hono": "^3.11.11"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20231218.0",
-    "wrangler": "^3.22.0"
+    "wrangler": "^3.22.0",
+    "gts": "^5.2.0",
+    "typescript": "~5.2.0",
+    "@types/node": "20.8.2"
   }
 }
